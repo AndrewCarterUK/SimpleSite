@@ -48,24 +48,23 @@ $templatingEngine = new Engine();
 $templatingEngine->addFolder('site', 'templates/site');
 
 /*
- * Here we create an object using our controller class at src\SiteController.php.
- * 
- * The full path for this class is SimpleSite\SiteController as we pointed the
- * 'SimpleSite' namespace to the 'src' directory.
+ * Here we instantiate our controller using the class at src\SiteController.php.
+ *
+ * If you're going to add any more, make sure you 'use' them at the top of this
+ * file.
  */
 $siteController = new SiteController($templatingEngine);
 
 /*
  * Here we set up our router. This is the package that will match a request to
- * our controller and one if its methods (sometimes called an action). This
- * might seem unnecessary, but routers can be really helpful when a site grows.
+ * a method in our controller (sometimes called an action). This might seem
+ * unnecessary, but routers can be really helpful as your site grows.
  * 
  * Check out more information here:
  * 
  * http://symfony.com/doc/current/components/routing/introduction.html
  * 
- * We're going to start off with two routes for the two different types of page
- * that we have set up on our controller (indexPage and simplePage).
+ * We're going to start off with two routes for our two different types of page.
  */
 $routes = array(
     'index'   => new Route('/',             array('_controller' => $siteController, '_method' => 'indexPage')),
@@ -80,8 +79,9 @@ foreach ($routes as $routeName => $route) {
 
 /*
  * Match the request we generated earlier to a route. UrlMatcher::matchRequest
- * will throw an exception if it cannot match a request. We need to catch this
- * and turn it into a not found response.
+ * will throw an exception if it cannot match a request.
+ 
+ * We need to catch this exception and turn it into a not found response.
  */
 $matcher = new UrlMatcher($routeCollection, new RequestContext('/'));
 
