@@ -7,7 +7,7 @@ MVC and object oriented programming.
 
 ## Instructions
 
-You may will need to install [composer](https://getcomposer.org) if you have not
+You will need to install [composer](https://getcomposer.org) if you have not
 already.
 
 ```sh
