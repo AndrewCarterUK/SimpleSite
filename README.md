@@ -15,7 +15,7 @@ git clone https://github.com/AndrewCarterUK/SimpleSite.git
 composer install
 ```
 
-These two commands will download the source code repository and use composer to
+These two commands will download this source code repository and use composer to
 install some helpful packages to the 'vendor' directory.
 
 Once you have done that, set up a development environment and point the document
