@@ -80,7 +80,7 @@ foreach ($routes as $routeName => $route) {
 /*
  * Match the request we generated earlier to a route. UrlMatcher::matchRequest
  * will throw an exception if it cannot match a request.
- 
+ *
  * We need to catch this exception and turn it into a not found response.
  */
 $matcher = new UrlMatcher($routeCollection, new RequestContext('/'));
