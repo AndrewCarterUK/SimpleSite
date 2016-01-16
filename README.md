@@ -3,7 +3,7 @@
 This is a simple PHP website by [Andrew Carter](https://twitter.com/AndrewCarterUK).
 
 It has been designed to try and introduce PHP developers to [composer](https://getcomposer.org),
-MVC and object oriented programming in PHP.
+MVC and object oriented programming.
 
 ## Instructions
 
